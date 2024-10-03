@@ -7,7 +7,7 @@
     public partial class Clients
     {
         private ClientsClient[] clientField;
-        
+
         [System.Xml.Serialization.XmlElementAttribute("Client")]
         public ClientsClient[] Client
         {
@@ -21,69 +21,82 @@
             }
         }
     }
-    
+
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
     public partial class ClientsClient
     {
+        private int registratorID;
 
-        private string fIOField;
+        private string fio;
 
-        private ushort regNumberField;
+        private ushort regNumber;
 
-        private ulong diasoftIDField;
+        private ulong diasoftID;
 
-        private bool diasoftIDFieldSpecified;
+        private bool diasoftIDSpecified;
 
-        private string registratorField;
-       
+        private string registrator;
+
+        public int RegistratorID
+        {
+            get
+            {
+                return this.registratorID;
+            }
+            set
+            {
+                this.registratorID = value;
+            }
+        }
+
         public string FIO
         {
             get
             {
-                return this.fIOField;
+                return this.fio;
             }
             set
             {
-                this.fIOField = value;
+                this.fio = value;
             }
         }
-        
+
         public ushort RegNumber
         {
             get
             {
-                return this.regNumberField;
+                return this.regNumber;
             }
             set
             {
-                this.regNumberField = value;
+                this.regNumber = value;
             }
         }
-     
+
         public ulong DiasoftID
         {
             get
             {
-                return this.diasoftIDField;
+                return this.diasoftID;
             }
             set
             {
-                this.diasoftIDField = value;
+                this.diasoftID = value;
             }
         }
-        
+
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DiasoftIDSpecified
         {
             get
             {
-                return this.diasoftIDFieldSpecified;
+                return this.diasoftIDSpecified;
             }
             set
             {
-                this.diasoftIDFieldSpecified = value;
+                this.diasoftIDSpecified = value;
             }
         }
 
@@ -91,11 +104,11 @@
         {
             get
             {
-                return this.registratorField;
+                return this.registrator;
             }
             set
             {
-                this.registratorField = value;
+                this.registrator = value;
             }
         }
     }
