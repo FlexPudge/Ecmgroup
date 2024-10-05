@@ -6,10 +6,10 @@
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
     public partial class Clients
     {
-        private ClientsClient[] clientField;
+        private List<Client> clientField;
 
         [System.Xml.Serialization.XmlElementAttribute("Client")]
-        public ClientsClient[] Client
+        public List<Client> Client
         {
             get
             {
@@ -25,8 +25,9 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class ClientsClient
+    public partial class Client
     {
+        #region private pror
         private int registratorID;
 
         private string fio;
@@ -38,7 +39,9 @@
         private bool diasoftIDSpecified;
 
         private string registrator;
+        #endregion
 
+        #region public prop
         public int RegistratorID
         {
             get
@@ -111,5 +114,6 @@
                 this.registrator = value;
             }
         }
+        #endregion
     }
 }
